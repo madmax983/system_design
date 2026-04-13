@@ -81,8 +81,12 @@ When replicas diverge, you need a strategy to reconcile:
 
 With **N** replicas, **W** write acknowledgments, **R** read acknowledgments:
 
-- **W + R > N** → strong consistency (at least one node overlaps)
+- **W + R > N** → can provide strong consistency because at least one replica overlaps
 - **W + R <= N** → eventual consistency
+
+> **Interview caveat:** `W + R > N` is necessary but not always sufficient in real systems.
+> You still need fresh replica reads (not stale secondaries), consistent conflict resolution,
+> and no "sloppy quorum" behavior for strict guarantees.
 
 Common configurations:
 - **N=3, W=2, R=2** — strong consistency, tolerates 1 failure
