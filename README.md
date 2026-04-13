@@ -53,6 +53,15 @@ Quick-reference material for interviews.
 
 ---
 
+### [Examples](examples/)
+Worked examples that combine fundamentals, patterns, and vocabulary into interview-ready answers.
+
+| Example | Description |
+|---------|-------------|
+| [Question 1: Distributed Metrics Logging & Aggregation](examples/question-1-distributed-metrics-logging-and-aggregation.md) | First-principles breakdown with Mermaid diagrams, APIs, and trade-offs |
+
+---
+
 ## How to Use This Repository
 
 1. **Before an interview**: Read through the [Fundamentals](fundamentals/) to solidify core concepts
