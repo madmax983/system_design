@@ -60,6 +60,7 @@ Worked examples that combine fundamentals, patterns, and vocabulary into intervi
 |---------|-------------|
 | [Question 1: Distributed Metrics Logging & Aggregation](examples/question-1-distributed-metrics-logging-and-aggregation.md) | First-principles breakdown with Mermaid diagrams, APIs, and trade-offs |
 | [Question 2: Distributed Stream Processing like Kafka](examples/question-2-distributed-stream-processing-like-kafka.md) | IC6/IC7 design emphasizing partitions, replication, durability, and replay semantics |
+| [Question 3: Design a Key-Value Store](examples/question-3-design-a-key-value-store.md) | IC6/IC7 design covering sharding, quorum consistency, hot-key mitigation, and multi-region DR |
 
 ---
 
