@@ -31,6 +31,18 @@ See [Principal Engineer Signals](../vocabulary/principal-engineer-signals.md) fo
 | [Distributed Coordination Service](distributed-coordination-service.md) | Correctness of locks and leases vs. availability | Fencing tokens, lease expiry under GC pauses, the service everyone depends on being the biggest blast radius |
 | [Observability Pipeline at 100M active series](observability-pipeline.md) | Cardinality and cost vs. the ability to debug an outage | Tail-based trace sampling, high-cardinality metrics, the pipeline staying up when everything else is down |
 
+## Component-Level Examples (First-Principles Angle)
+
+Three further IC6/IC7 examples take the other angle: instead of designing the *platform around* a component, they build the component itself from a product contract, a capacity and cost model, explicit APIs, a failure-first write path, and an evolution roadmap. Each pairs with one of the platform-level designs above; practicing both angles on the same domain is the fastest way to find the gaps in your reasoning.
+
+| Example | Builds | Pairs with | The contrast |
+|---------|--------|-----------|--------------|
+| [Distributed Metrics Logging & Aggregation](question-1-distributed-metrics-logging-and-aggregation.md) | The metrics store: ingestion, cardinality strategy, rollups, query planning, alerting integration | [Observability Pipeline](observability-pipeline.md) | The pipeline example treats metrics as one of three signals and optimizes the *bill*; this one goes deep on the storage engine and query path |
+| [Distributed Stream Processing like Kafka](question-2-distributed-stream-processing-like-kafka.md) | The log itself: partitions, replication, ISR, consumer groups, metadata scaling | [Event Streaming Platform](event-streaming-platform.md) | The platform example assumes the log exists and designs governance, tiering, and the exactly-once boundary; this one designs the log |
+| [Globally Distributed Key-Value Store](question-3-design-a-key-value-store.md) | The store: sharding, quorum reads/writes, hot-key mitigation, LSM engine, TTL, multi-region DR | [Multi-Region Active-Active](multi-region-active-active.md) | The multi-region example classifies *application* data and picks a conflict model per class; this one builds the storage primitive those classes sit on |
+
+These follow their own numbered structure rather than the twelve-section template below. Score them with the same [scorecard](../practice/scorecard.md); the dimensions apply regardless of structure.
+
 ## The Template Each Example Follows
 
 Every example uses the same skeleton so they can be compared side by side. In an interview you will not have time for every section; the ordering reflects the priority a principal engineer gives each concern.

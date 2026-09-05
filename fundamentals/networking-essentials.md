@@ -76,7 +76,7 @@ Translates human-readable domain names to IP addresses.
 | Header compression | No | HPACK | QPACK |
 | Transport | TCP | TCP | QUIC (UDP-based) |
 | Head-of-line blocking | Connection level | TCP level | None |
-| Server push | No | Yes | Yes |
+| Server push | No | Yes (limited adoption) | Limited / often disabled in clients |
 
 ### TLS Handshake
 
@@ -114,6 +114,6 @@ Full-duplex communication channel over a single TCP connection.
 
 - TCP guarantees delivery and ordering; UDP trades reliability for speed
 - DNS is the first step in every request — its caching behavior affects failover speed
-- HTTP/2 multiplexing eliminates the need for domain sharding and connection pooling tricks
+- HTTP/2 multiplexing reduces the need for domain sharding and many connection-pooling workarounds
 - TLS adds 1-2 round trips; TLS 1.3 reduces this to 1 (or 0 for resumption)
 - Choose WebSockets only when you need true bidirectional communication; SSE is simpler for server-to-client pushes

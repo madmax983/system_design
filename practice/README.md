@@ -45,7 +45,7 @@ Re-attempt each prompt on this schedule. On the re-attempt, do not review the wo
 | 3rd | Day 10 | Attempt only the deep dives and failure modes, from memory, in 20 minutes |
 | 4th | Day 30 | Full attempt, cold, with a different interviewer follow-up emphasis |
 
-Seven worked prompts on this schedule is roughly 28 sessions over five weeks, at about five sessions per week. Interleave with the [prompt bank](prompt-bank.md) so that you are not memorizing solutions but practicing the method.
+Ten worked prompts on this schedule is roughly 40 sessions over eight weeks, at about five sessions per week. Pair each platform-level prompt with its component-level counterpart (the [examples index](../examples/README.md#component-level-examples-first-principles-angle) lists the pairs) in consecutive sessions; designing the same domain from both angles exposes the gaps fastest. Interleave with the [prompt bank](prompt-bank.md) so that you are not memorizing solutions but practicing the method.
 
 ## Choosing Where to Focus
 
@@ -67,7 +67,7 @@ The [interviewer guide](interviewer-guide.md) lets a peer run a mock from any pr
 
 | File | Purpose |
 |------|---------|
-| [prompts/](prompts/) | One card per worked example: the prompt, what it trains, pacing, hidden hints, interviewer follow-ups with hidden answers, scoring checklist |
+| [prompts/](prompts/) | One card per worked example (ten in total: seven platform-level, three component-level): the prompt, what it trains, pacing, hidden hints, interviewer follow-ups with hidden answers, scoring checklist |
 | [prompt-bank.md](prompt-bank.md) | Additional principal-level prompts without full solutions; hints hidden |
 | [scorecard.md](scorecard.md) | The self-assessment rubric with level thresholds |
 | [reflection-template.md](reflection-template.md) | Post-session journal |

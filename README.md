@@ -74,6 +74,14 @@ Complete designs under real constraints, each following a twelve-section templat
 | [Distributed Coordination Service](examples/distributed-coordination-service.md) | Lock correctness under partitions; fencing tokens, leases, watches, guardrails |
 | [Observability Pipeline](examples/observability-pipeline.md) | Cardinality and cost vs. debugging an outage; a pipeline that is up when nothing else is |
 
+Three further IC6/IC7 examples take a first-principles, build-the-component angle (product contract, capacity model, APIs, failure-first write path, roadmap) and pair naturally with the platform-level designs above:
+
+| Example | Pairs with |
+|---------|-----------|
+| [Distributed Metrics Logging & Aggregation](examples/question-1-distributed-metrics-logging-and-aggregation.md) | [Observability Pipeline](examples/observability-pipeline.md) |
+| [Distributed Stream Processing like Kafka](examples/question-2-distributed-stream-processing-like-kafka.md) | [Event Streaming Platform](examples/event-streaming-platform.md) |
+| [Globally Distributed Key-Value Store](examples/question-3-design-a-key-value-store.md) | [Multi-Region Active-Active](examples/multi-region-active-active.md) |
+
 ### [Practice](practice/)
 A self-directed practice program: attempt before reading, score against a rubric, reflect, re-attempt on a spaced schedule.
 
