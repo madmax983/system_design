@@ -2,6 +2,8 @@
 
 A step-by-step approach for tackling any system design question. Aim to spend roughly the following time per section in a 45-minute interview.
 
+> **Interviewing at staff or principal level?** This framework is the baseline. See [Principal Engineer Signals](principal-engineer-signals.md) for how the pacing and emphasis shift, and the [Worked Examples](../examples/) for what a complete principal-level answer looks like.
+
 ## Step 1: Clarify Requirements (5 minutes)
 
 **Goal:** Understand what you're building and define the scope.
@@ -158,6 +160,22 @@ For each major decision, state:
 | Not discussing trade-offs | Every decision has a trade-off — name it |
 | Monologuing | Check in with the interviewer regularly |
 | Trying to cover everything | Go deep on 2-3 areas rather than shallow on everything |
+
+## Beyond the Framework: The Principal-Level Additions
+
+At senior level, executing the six steps well is the bar. At staff and principal level, interviewers listen for additions the framework does not prompt:
+
+| Addition | Where it fits | One-line version |
+|----------|--------------|------------------|
+| **Reframe the problem** | Step 1 | "The requirement that dominates is X; the requirement in the prompt that is subtly wrong is Y." |
+| **Derive constraints, not just numbers** | Step 2 | "This number forces this decision." |
+| **State invariants and where they are enforced** | Step 4 | "This must always be true; it is enforced here; it is verified by this." |
+| **Name the deliberately relaxed invariant** | Step 4 | "This is temporarily false during X; the compensating mechanism is Y." |
+| **Correlated failure and degradation order** | Step 5 | "The failure that hits everything is Z. Under overload we shed A, then B, and never C." |
+| **Evolution path and one-way doors** | Step 6 | "v1 is this; the path to v3 under live traffic is this; the decisions we cannot undo are these." |
+| **The cost knob** | Step 6 | "The dominant cost is X and the knob is Y." |
+
+The [scorecard](../practice/scorecard.md) turns these into an 18-dimension self-assessment.
 
 ## Cheat Sheet: Components to Consider
 
